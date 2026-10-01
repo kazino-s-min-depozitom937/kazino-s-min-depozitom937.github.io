@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Казино с минимальным депозитом от 10 до 300 ₽ — калькулятор входа 2026</title>
+<meta name="description" content="Калькулятор казино с минимальным депозитом 10, 50, 100 и 300 рублей: сколько раундов даёт вход, во сколько раз нужно вырасти до минимального вывода и что съедает комиссия при выводе на карту и по СБП.">
+<link rel="canonical" href="https://kazino-s-min-depozitom937.github.io/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Казино с минимальным депозитом 2026: калькулятор порога входа и вывода">
+<meta property="og:description" content="Депозит, минимальная ставка, минимальный вывод и комиссия — четыре числа, которые решают, имеет ли смысл вход от 50 или 100 рублей. Считаем на странице, без JS тоже работает.">
+<meta property="og:url" content="https://kazino-s-min-depozitom937.github.io/">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito+Sans:opsz,wght@6..12,400..800&display=swap">
+<style>
+:root{
+  --cream:#f6efe2;--sheet:#fffbf3;--sheet-2:#efe5d3;--raised:#ffffff;
+  --text:#2b1a1d;--text-2:#5c474b;--text-3:#7d6a6e;--hair:#e2d6c2;--hair-2:#c3b29b;
+  --wine:#7a1f2e;--wine-deep:#5f1523;--wine-wash:#f3e1e3;--on-wine:#fff4f1;
+  --ok:#2f6b4f;--ok-wash:#dfeae2;--no:#9b2c2c;--no-wash:#f5dddb;--mid:#8a5a12;--mid-wash:#f2e6cd;
+  --bar-a:#7a1f2e;--bar-b:#b8864a;--bar-c:#4a6b8a;--bar-d:#5d7a4f;--grid:#d9ccb6;
+  --serif:"Merriweather","Iowan Old Style",Georgia,"Times New Roman",serif;
+  --sans:"Nunito Sans","Segoe UI",Roboto,system-ui,sans-serif;
+  --t-hero:clamp(1.9rem,1.3rem + 2.4vw,2.9rem);--t-h2:clamp(1.4rem,1.15rem + 1vw,1.75rem);--t-h3:1.125rem;
+  --t-lead:clamp(1.05rem,1rem + .35vw,1.18rem);--t-body:1.0625rem;--t-ui:.9375rem;--t-small:.875rem;--t-tiny:.78rem;--t-num:clamp(1.6rem,1.3rem + 1vw,2rem);
+  --u1:4px;--u2:8px;--u3:12px;--u4:16px;--u5:20px;--u6:24px;--u8:32px;--u10:40px;--u12:48px;--u16:64px;
+  --edge:clamp(16px,4vw,24px);--gap-section:clamp(44px,6vw,76px);
+  --col-text:700px;--col-page:1020px;
+  --rad-s:4px;--rad-m:8px;--rad-l:12px;
+  --sh-1:0 1px 2px rgba(43,26,29,.06);--sh-2:0 4px 14px -6px rgba(43,26,29,.22);
+  --ease:cubic-bezier(.2,.8,.3,1);--fast:140ms;--mid-d:240ms;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --cream:#1c1416;--sheet:#241a1d;--sheet-2:#2d2226;--raised:#332629;
+  --text:#f1e6dc;--text-2:#c9b7b1;--text-3:#9a878b;--hair:#3b2d31;--hair-2:#55434a;
+  --wine:#d98796;--wine-deep:#e9a2ae;--wine-wash:#3a2328;--on-wine:#1c1416;
+  --ok:#7dbb97;--ok-wash:#1f3328;--no:#e38a82;--no-wash:#3e2320;--mid:#d9a95a;--mid-wash:#3a2e1a;
+  --bar-a:#d98796;--bar-b:#d2a66a;--bar-c:#7fa3c4;--bar-d:#8fb07f;--grid:#3f3236;
+  --sh-1:0 1px 2px rgba(0,0,0,.4);--sh-2:0 6px 18px -6px rgba(0,0,0,.6);
+  color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --cream:#1c1416;--sheet:#241a1d;--sheet-2:#2d2226;--raised:#332629;
+  --text:#f1e6dc;--text-2:#c9b7b1;--text-3:#9a878b;--hair:#3b2d31;--hair-2:#55434a;
+  --wine:#d98796;--wine-deep:#e9a2ae;--wine-wash:#3a2328;--on-wine:#1c1416;
+  --ok:#7dbb97;--ok-wash:#1f3328;--no:#e38a82;--no-wash:#3e2320;--mid:#d9a95a;--mid-wash:#3a2e1a;
+  --bar-a:#d98796;--bar-b:#d2a66a;--bar-c:#7fa3c4;--bar-d:#8fb07f;--grid:#3f3236;
+  --sh-1:0 1px 2px rgba(0,0,0,.4);--sh-2:0 6px 18px -6px rgba(0,0,0,.6);
+  color-scheme:dark;}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:1ms!important;animation-duration:1ms!important}}
+body{margin:0;background:var(--cream);color:var(--text);font:400 var(--t-body)/1.62 var(--sans);-webkit-font-smoothing:antialiased;hyphens:auto}
+h1,h2,h3{font-family:var(--serif);margin:0;text-wrap:balance}
+h1{font-size:var(--t-hero);line-height:1.12;font-weight:700;letter-spacing:-.01em;max-inline-size:22ch}
+h2{font-size:var(--t-h2);line-height:1.2;font-weight:700}
+h3{font-size:var(--t-h3);line-height:1.3;font-weight:700;margin:var(--u8) 0 var(--u2)}
+p{margin:0 0 var(--u3);text-wrap:pretty}
+a{color:var(--wine);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color var(--fast) var(--ease)}
+a:hover{color:var(--wine-deep);text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+::selection{background:var(--wine-wash);color:var(--text)}
+.tab{font-variant-numeric:tabular-nums}
+.page{max-width:var(--col-page);margin-inline:auto;padding-inline:var(--edge)}
+.text{max-width:var(--col-text);margin-inline:auto;padding-inline:var(--edge)}
+section[id]{scroll-margin-top:64px}
+.soft{color:var(--text-2)}.dim{color:var(--text-3)}
+.small{font-size:var(--t-small);line-height:1.45}
+
+/* masthead */
+.masthead{position:sticky;top:0;z-index:30;background:var(--cream);border-bottom:1px solid var(--hair);height:54px}
+.masthead .page{height:100%;display:flex;align-items:center;gap:var(--u5);justify-content:space-between}
+.brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:17px;color:var(--text);text-decoration:none;white-space:nowrap}
+.brand:hover{color:var(--text);text-decoration:none}
+.brand svg{width:26px;height:26px;flex:none}
+.masthead nav{display:flex;gap:var(--u4);font-size:14px;font-weight:600;overflow-x:auto;white-space:nowrap;scrollbar-width:none;mask-image:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 14px),transparent)}
+.masthead nav::-webkit-scrollbar{display:none}
+.masthead nav a{color:var(--text-2);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+.masthead nav a:hover{color:var(--text)}
+.masthead nav a.now{color:var(--wine);border-bottom-color:var(--wine)}
+
+/* intro */
+.intro{padding-block:var(--u12) var(--u8)}
+.intro .when{font-size:var(--t-small);color:var(--text-3);margin-bottom:var(--u3)}
+.intro .lead{font-size:var(--t-lead);line-height:1.5;color:var(--text-2);max-inline-size:60ch;margin:var(--u4) 0 var(--u6)}
+.brief{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--u3);margin:0;padding:0}
+.brief div{background:var(--sheet);border:1px solid var(--hair);border-radius:var(--rad-m);padding:var(--u4) var(--u5)}
+.brief dt{font-size:var(--t-tiny);color:var(--text-3);letter-spacing:.01em;margin-bottom:4px}
+.brief dd{margin:0;font-family:var(--serif);font-weight:700;font-size:var(--t-num);line-height:1.1;color:var(--wine)}
+.brief dd small{display:block;font-family:var(--sans);font-weight:400;font-size:var(--t-small);color:var(--text-2);margin-top:4px}
+@media (max-width:640px){.brief{grid-template-columns:1fr}}
+
+/* sections */
+.part{padding-block:var(--gap-section)}
+.part+.part{border-top:1px solid var(--hair)}
+.part h2{margin-bottom:var(--u4)}
+.part .answer{font-size:var(--t-body);max-inline-size:66ch;margin-bottom:var(--u5)}
+.part .answer b{font-weight:700}
+.prose{max-inline-size:66ch}
+.prose ul{padding-left:1.2em;margin:0 0 var(--u3)}
+.prose li{margin-bottom:4px}
+
+/* calculator */
+.board{display:grid;grid-template-columns:1fr 1fr;gap:var(--u5);margin:var(--u5) 0;background:var(--sheet);border:1px solid var(--hair-2);border-radius:var(--rad-l);padding:var(--u5);box-shadow:var(--sh-2)}
+@media (max-width:760px){.board{grid-template-columns:1fr}}
+.board fieldset{border:0;margin:0;padding:0;display:grid;gap:var(--u4)}
+.board legend{font-family:var(--serif);font-weight:700;font-size:var(--t-h3);padding:0;margin-bottom:var(--u3)}
+.knob{display:grid;grid-template-columns:1fr auto;gap:2px var(--u3);align-items:center;font-size:var(--t-small);color:var(--text-2)}
+.knob output{font-weight:700;color:var(--text);font-variant-numeric:tabular-nums;font-size:var(--t-ui)}
+.knob input[type=range]{grid-column:1/-1;width:100%;accent-color:var(--wine);margin:0}
+.knob .hint{grid-column:1/-1;font-size:var(--t-tiny);color:var(--text-3)}
+.result{margin:0;display:grid;gap:var(--u3);align-content:start}
+.result>div{display:grid;grid-template-columns:1fr auto;gap:var(--u3);align-items:center;background:var(--sheet-2);border-radius:var(--rad-m);padding:var(--u3) var(--u4)}
+.result dt{font-size:var(--t-small);color:var(--text-2);margin:0}
+.result dd{margin:0;font-family:var(--serif);font-weight:700;font-size:var(--t-num);color:var(--text);font-variant-numeric:tabular-nums;white-space:nowrap}
+.result dd.minus{color:var(--no)}
+.result dd.plus{color:var(--ok)}
+.verdict{grid-column:1/-1;border-top:1px dashed var(--hair-2);padding-top:var(--u4);font-size:var(--t-ui)}
+.verdict b{font-weight:800}
+.verdict .mark{display:inline-block;padding:2px 8px;border-radius:var(--rad-s);font-size:var(--t-tiny);font-weight:800;margin-right:6px;vertical-align:1px}
+.verdict .mark.good{background:var(--ok-wash);color:var(--ok)}
+.verdict .mark.warn{background:var(--mid-wash);color:var(--mid)}
+.verdict .mark.bad{background:var(--no-wash);color:var(--no)}
+.formulas{font-size:var(--t-small);color:var(--text-3);margin:var(--u3) 0 var(--u6);max-inline-size:72ch}
+.formulas code{font-family:var(--sans);font-weight:600;color:var(--text-2)}
+
+/* figures */
+figure.fig{margin:var(--u6) 0;background:var(--sheet);border:1px solid var(--hair);border-radius:var(--rad-l);padding:var(--u4) var(--u5)}
+figure.fig svg{display:block;max-width:100%;overflow:visible}
+figure.fig svg text{font-family:var(--sans);fill:var(--text-2);font-size:12px}
+figure.fig svg text.v{fill:var(--text);font-weight:700}
+figure.fig svg text.cap{fill:var(--text-3);font-size:11px}
+figure.fig figcaption{font-size:var(--t-small);color:var(--text-3);margin-top:var(--u3)}
+.key{display:flex;gap:var(--u4);flex-wrap:wrap;font-size:13px;color:var(--text-2);margin-top:var(--u3)}
+.key i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+/* tables */
+.grid{margin-top:var(--u4);border:1px solid var(--hair);border-radius:var(--rad-m);overflow-x:auto;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:var(--t-ui);line-height:1.4}
+caption{caption-side:top;text-align:left;font-size:var(--t-small);color:var(--text-3);padding:var(--u3) var(--u4) var(--u2)}
+th{text-align:left;font-size:13px;font-weight:700;color:var(--text-2);padding:var(--u2) var(--u4);border-bottom:2px solid var(--hair-2);white-space:nowrap}
+td{padding:var(--u3) var(--u4);border-top:1px solid var(--hair);vertical-align:top}
+tbody tr:first-child td{border-top:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.lbl{font-weight:700;white-space:nowrap}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.rails td:first-child{font-weight:700}
+
+/* lists */
+ol.route{list-style:none;padding:0;margin:var(--u4) 0;counter-reset:r;display:grid;gap:var(--u3);max-inline-size:66ch}
+ol.route li{counter-increment:r;display:grid;grid-template-columns:32px 1fr;gap:var(--u3);align-items:start}
+ol.route li::before{content:counter(r);width:26px;height:26px;border-radius:50%;background:var(--wine);color:var(--on-wine);font-weight:800;font-size:13px;display:inline-grid;place-items:center;margin-top:2px}
+ol.route b{font-weight:800}
+
+/* details */
+.qa{border-top:1px solid var(--hair);max-inline-size:66ch;margin-top:var(--u5)}
+details{border-bottom:1px solid var(--hair)}
+summary{list-style:none;cursor:pointer;font-weight:700;font-size:16px;padding:var(--u4) 0;display:grid;grid-template-columns:1fr 20px;gap:var(--u3);align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:9px;height:9px;border-right:2px solid var(--text-3);border-bottom:2px solid var(--text-3);transform:rotate(45deg);justify-self:center;transition:transform var(--mid-d) var(--ease),border-color var(--fast)}
+details[open] summary::after{transform:rotate(-135deg);border-color:var(--wine)}
+summary:hover{color:var(--wine)}
+details .body{padding-bottom:var(--u5);color:var(--text-2);font-size:16px;line-height:1.6}
+details .body p{margin-bottom:var(--u2)}
+
+/* care, channel, footer */
+.care{border-top:1px solid var(--hair-2);padding-top:var(--u8)}
+.care h2{display:flex;align-items:center;gap:var(--u3);font-size:22px}
+.age{font-family:var(--sans);font-size:var(--t-tiny);font-weight:800;border:1.5px solid var(--text-2);border-radius:var(--rad-s);padding:1px 6px;color:var(--text-2)}
+.channel{margin-top:var(--u8);background:var(--wine-wash);border-radius:var(--rad-l);padding:var(--u6);display:grid;grid-template-columns:1fr auto;gap:var(--u4);align-items:center}
+@media (max-width:640px){.channel{grid-template-columns:1fr}}
+.channel h2{font-size:20px;margin-bottom:var(--u2)}
+.channel p{margin:0;color:var(--text-2);font-size:var(--t-ui)}
+.go{display:inline-flex;align-items:center;gap:8px;font:800 var(--t-ui)/1 var(--sans);padding:12px 18px;border-radius:var(--rad-m);background:var(--wine);color:var(--on-wine);text-decoration:none;white-space:nowrap;transition:background-color var(--fast) var(--ease)}
+.go:hover{background:var(--wine-deep);color:var(--on-wine);text-decoration:none}
+.go svg{width:16px;height:16px;fill:currentColor}
+footer{background:var(--sheet-2);border-top:1px solid var(--hair);padding-block:var(--u8);font-size:var(--t-small);color:var(--text-2);margin-top:var(--gap-section)}
+footer .page{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--u6)}
+@media (max-width:760px){footer .page{grid-template-columns:1fr}}
+footer h3{font-size:14px;margin:0 0 var(--u2);font-family:var(--sans);font-weight:800}
+footer p{margin-bottom:var(--u2)}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","@id":"https://kazino-s-min-depozitom937.github.io/#page","headline":"Казино с минимальным депозитом 2026: вход от 50 ₽ без потери на пороге вывода","description":"Калькулятор казино с минимальным депозитом 10, 50, 100 и 300 рублей: сколько раундов даёт вход, во сколько раз нужно вырасти до минимального вывода и что съедает комиссия при выводе на карту и по СБП.","inLanguage":"ru","datePublished":"2026-10-01","dateModified":"2026-10-01","author":{"@type":"Organization","name":"Редакция «Нижний порог»"},"publisher":{"@type":"Organization","name":"Нижний порог"},"mainEntityOfPage":"https://kazino-s-min-depozitom937.github.io/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","@id":"https://kazino-s-min-depozitom937.github.io/#howto-first-deposit","name":"Пять проверок перед первым переводом на малый депозит","totalTime":"PT10M","step":[
+{"@type":"HowToStep","position":1,"name":"Откройте кассу до регистрации","text":"Откройте кассу до регистрации. Раздел с лимитами обычно доступен без входа: ищите строки «минимальный депозит», «минимальная сумма вывода» и «комиссия» для каждого способа отдельно. Если у СБП и карты МИР числа разные — записывайте оба."},
+{"@type":"HowToStep","position":2,"name":"Найдите минимальную ставку в самой игре","text":"Найдите минимальную ставку в самой игре. Запустите слот в демо-режиме и посмотрите нижнюю границу ставки в панели: у части провайдеров она 1–2 ₽ на линию, у части — 10–20 ₽ за спин. Для живых столов нижняя граница заметно выше."},
+{"@type":"HowToStep","position":3,"name":"Посчитайте кратность до вывода","text":"Посчитайте кратность до вывода. Разделите минимальный вывод на депозит. Кратность выше ×10 означает, что малый вход формальный: до первой выплаты баланс должен вырасти на порядок."},
+{"@type":"HowToStep","position":4,"name":"Сверьте лицензию и правила KYC","text":"Сверьте лицензию и правила KYC. Номер лицензии ищите в подвале сайта и в реестре регулятора; в правилах — пункт о верификации: если документы требуют до первого вывода, а не до депозита, маленькая сумма может зависнуть на проверке."},
+{"@type":"HowToStep","position":5,"name":"Переведите ровно минимум","text":"Переведите ровно минимум. Первый перевод — сумма, равная минимальному депозиту, не больше. Задача первого перевода — увидеть, что деньги зачислились, что бонус не включился сам и что в кассе появилась кнопка вывода с ожидаемыми лимитами."}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","@id":"https://kazino-s-min-depozitom937.github.io/#faq","mainEntity":[
+{"@type":"Question","name":"Почему калькулятор не учитывает отдачу слота?","acceptedAnswer":{"@type":"Answer","text":"Отдача (RTP) описывает среднее на дистанции в миллионы спинов, а малый депозит живёт 20–100 раундов. На такой дистанции разброс результата определяет волатильность игры, и среднее почти не помогает предсказать, дойдёт ли баланс до минимального вывода. Калькулятор считает только то, что известно заранее и зафиксировано в правилах кассы: сумму входа, нижнюю границу ставки, порог вывода и комиссию. Эти четыре числа игрок проверяет сам, а отдача остаётся заявлением провайдера."}},
+{"@type":"Question","name":"Есть ли разница между депозитом 50 ₽ и 100 ₽, если минимальный вывод одинаковый?","acceptedAnswer":{"@type":"Answer","text":"Разница в кратности до вывода: при пороге 500 ₽ входу в 50 ₽ нужно вырасти в десять раз, входу в 100 ₽ — в пять. Второй сценарий чаще заканчивается выплатой при тех же шансах в игре, потому что дистанция до цели короче. Если цель — проверить кассу и вывод, 100 ₽ чаще оказывается дешевле 50 ₽: меньше вероятность, что придётся пополнять второй раз."}},
+{"@type":"Question","name":"Можно ли внести минимальный депозит по СБП, если у банка есть лимит на переводы?","acceptedAnswer":{"@type":"Answer","text":"Лимиты СБП касаются сумм в сотни тысяч рублей в месяц и на малый депозит не влияют. Ограничение бывает другим: банк отправителя может отклонить перевод в адрес получателя, которого антифрод относит к азартным играм. Тогда платёж не проходит независимо от суммы, и помогает другой способ пополнения, а не изменение суммы."}},
+{"@type":"Question","name":"Что делать, если минимальный вывод выше, чем весь мой баланс после игры?","acceptedAnswer":{"@type":"Answer","text":"Остаток ниже порога вывода остаётся на счёте до следующей сессии или до пополнения. Перевести его на карту нельзя, пока баланс не достигнет минимума — так работает правило у большинства касс. Поэтому порог вывода стоит смотреть до первого депозита: при входе 50 ₽ и минимуме 1 000 ₽ почти любой итог сессии окажется «подвисшим» балансом."}},
+{"@type":"Question","name":"Бонус за минимальный депозит выгоднее, чем игра без бонуса?","acceptedAnswer":{"@type":"Answer","text":"При депозите 100 ₽ и вейджере x35 на сумму депозит плюс бонус оборот составит 7 000 ₽ — в 70 раз больше собственных денег. На минимальной ставке 5 ₽ это 1 400 раундов, и за такую дистанцию математическое преимущество игры почти наверняка съест и бонус, и депозит. Без бонуса 100 ₽ можно вывести после первого же удачного раунда, если баланс дошёл до порога. Для малого входа игра без бонуса обычно предпочтительнее."}},
+{"@type":"Question","name":"Зачем переводить ровно минимум, если планирую играть на бо́льшую сумму?","acceptedAnswer":{"@type":"Answer","text":"Первый перевод — проверка кассы, а не игра. Он показывает время зачисления, срабатывание автоматического бонуса, доступность кнопки вывода и реальные лимиты для вашего способа оплаты. Если на этом шаге что-то не сходится с правилами, вы теряете минимальную сумму, а не банк на вечер. Вторая сумма переводится уже после того, как первый вывод пришёл на карту."}}
+]}
+</script>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="page">
+    <a class="brand" href="#top" aria-label="Нижний порог — на начало страницы">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="var(--wine)"/><path d="M9 29V11h4v7h7v-7h4v18h-4v-7h-7v7z" fill="var(--on-wine)"/><rect x="27" y="11" width="4" height="18" rx="1" fill="var(--on-wine)" opacity=".55"/></svg>
+      Нижний порог
+    </a>
+    <nav aria-label="Разделы">
+      <a href="#calc">Калькулятор</a>
+      <a href="#porogi">Пороги</a>
+      <a href="#stavka">Ставка</a>
+      <a href="#vyvod">Вывод</a>
+      <a href="#bonus">Бонус</a>
+      <a href="#proverka">Проверка</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="intro">
+  <div class="text">
+    <p class="when">Обновлено 1 октября 2026 · расчёты в рублях для игроков из России</p>
+    <h1>Казино с минимальным депозитом 2026: вход от 50 ₽ без потери на пороге вывода</h1>
+    <p class="lead">Казино с минимальным депозитом обещает вход от 10 рублей, но эта цифра сама по себе не описывает стоимость входа. Её задают ещё три числа: минимальная ставка в игре, минимальная сумма вывода и комиссия на выплату. Ниже калькулятор, который сводит четыре числа в один ответ, и разбор порогов 10, 50, 100 и 300 ₽ для вывода на карту и по СБП. Все сценарии на странице — расчётные примеры по типовым правилам касс, а не обзор конкретных сайтов.</p>
+    <dl class="brief">
+      <div><dt>Базовый сценарий: 100 ₽ при ставке 5 ₽</dt><dd class="tab">20 раундов<small>столько попыток покупает минимальный вход</small></dd></div>
+      <div><dt>Порог вывода 500 ₽</dt><dd class="tab">×5<small>во столько раз должен вырасти баланс</small></dd></div>
+      <div><dt>Комиссия 2 % на выплату</dt><dd class="tab">10 ₽<small>уйдёт из первых 500 ₽ при выводе</small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="part" id="calc">
+  <div class="text">
+    <h2>Калькулятор порога: депозит, ставка, вывод и комиссия в одном расчёте</h2>
+    <p class="answer">Малый вход имеет смысл, когда депозит покупает <b>не меньше 10–20 раундов</b> на минимальной ставке, а до порога вывода остаётся <b>не больше ×5</b>. Для казино с минимальным депозитом 100 рублей при ставке 5 ₽, выплате от 500 ₽ и комиссии 2 % это 20 раундов, кратность ×5 и 490 ₽ на руки с первой выплаты. Передвиньте ползунки под правила своей кассы — расчёт обновится; без скриптов на странице остаются значения базового сценария.</p>
+
+    <form class="board" id="board" aria-labelledby="board-title">
+      <fieldset>
+        <legend id="board-title">Четыре числа из правил кассы</legend>
+        <label class="knob" for="dep">Минимальный депозит<output for="dep" id="dep-out" class="tab">100 ₽</output>
+          <input type="range" id="dep" name="dep" min="10" max="1000" step="10" value="100">
+          <span class="hint">Типовые пороги: 10, 50, 100, 300, 500 ₽</span>
+        </label>
+        <label class="knob" for="bet">Минимальная ставка за раунд<output for="bet" id="bet-out" class="tab">5 ₽</output>
+          <input type="range" id="bet" name="bet" min="1" max="50" step="1" value="5">
+          <span class="hint">Слоты 1–20 ₽ за спин, живые столы от 50 ₽</span>
+        </label>
+        <label class="knob" for="wd">Минимальная сумма вывода<output for="wd" id="wd-out" class="tab">500 ₽</output>
+          <input type="range" id="wd" name="wd" min="100" max="3000" step="50" value="500">
+          <span class="hint">Чаще всего 300–1 000 ₽; по карте выше, чем по СБП</span>
+        </label>
+        <label class="knob" for="fee">Комиссия на вывод<output for="fee" id="fee-out" class="tab">2 %</output>
+          <input type="range" id="fee" name="fee" min="0" max="10" step="0.5" value="2">
+          <span class="hint">0 % по СБП у многих касс; 2–5 % на карту, фиксированная сеть у USDT</span>
+        </label>
+      </fieldset>
+      <dl class="result" aria-live="polite">
+        <div><dt>Раундов на минимальной ставке</dt><dd id="r-rounds" class="tab">20</dd></div>
+        <div><dt>Кратность до вывода</dt><dd id="r-mult" class="tab">×5,0</dd></div>
+        <div><dt>Комиссия с первой выплаты</dt><dd id="r-fee" class="tab minus">−10 ₽</dd></div>
+        <div><dt>На руки при минимальном выводе</dt><dd id="r-net" class="tab">490 ₽</dd></div>
+        <div><dt>Чистый результат сценария</dt><dd id="r-profit" class="tab plus">+390 ₽</dd></div>
+      </dl>
+      <p class="verdict" id="r-verdict"><span class="mark good">рабочий порог</span><b>Депозит покупает 20 раундов, до вывода ×5.</b> Вход дешёвый по-настоящему: сессия получает дистанцию, а первая выплата не требует вырасти на порядок.</p>
+    </form>
+    <p class="formulas">Формулы: <code>раунды = ⌊депозит ÷ ставка⌋</code>; <code>кратность = вывод ÷ депозит</code>; <code>комиссия = вывод × ставка комиссии</code>; <code>на руки = вывод − комиссия</code>; <code>результат = на руки − депозит</code>. Пороги оценки: раундов &lt; 10 — «формальный вход», кратность &gt; 10 — «порог вывода съедает смысл», иначе — «рабочий порог».</p>
+
+    <div class="prose">
+      <p>Каждое из четырёх чисел берётся из конкретного места на сайте оператора. Нижние границы пополнения и выплаты указаны в кассе для каждого способа оплаты отдельно: по СБП одно значение, по карте МИР другое, для USDT третье. Минимальная ставка видна в самом слоте — её задаёт провайдер игры, а оператор может только поднять нижнюю границу для бонусного режима. Комиссия на вывод прописана в правилах выплат, и там же обычно спрятано условие «комиссия взимается при обороте меньше x3 от депозита», которое превращает ноль в 10–15 %.</p>
+      <p>Калькулятор намеренно не трогает отдачу и волатильность. На дистанции в двадцать попыток математическое ожидание не описывает результат; его описывает дисперсия, а она у каждого слота своя. Поэтому единственный честный способ оценить малый вход — посмотреть, сколько попыток он покупает и насколько далеко от стартовой суммы стоит порог выплаты. Эти два числа игрок контролирует выбором кассы и игры, остальное контролирует генератор случайных чисел.</p>
+      <p>Чистый результат сценария — учебная величина. Она показывает, что останется, если сессия дойдёт ровно до минимального вывода и игрок выведет всё. В жизни баланс останавливается в произвольной точке: ниже порога он зависает на счёте, выше — часть уходит в комиссию. Пересчитайте поле «минимальная сумма вывода» на тот баланс, при котором вы планируете остановиться, и получите реальную цену сценария.</p>
+      <p>Где искать исходные числа в интерфейсе. Лимиты пополнения и выплат живут во вкладке кассы рядом с иконкой способа оплаты, иногда — во всплывающей подсказке у поля суммы. Валюта счёта выбирается при регистрации и потом не меняется; если выбрать евро или тенге, минимумы будут пересчитаны по внутреннему курсу с округлением вверх, и копейки превратятся в десятки рублей. Комиссии и условие «оборот x3» прописаны в пользовательском соглашении, обычно в разделе о выплатах или о противодействии злоупотреблениям; поиск по странице по слову «комиссия» экономит десять минут чтения оферты.</p>
+    </div>
+
+    <div class="qa">
+      <details><summary>Почему калькулятор не учитывает отдачу слота?</summary><div class="body"><p>Отдача (RTP) описывает среднее на дистанции в миллионы спинов, а малый депозит живёт 20–100 раундов. На такой дистанции разброс результата определяет волатильность игры, и среднее почти не помогает предсказать, дойдёт ли баланс до минимального вывода. Калькулятор считает только то, что известно заранее и зафиксировано в правилах кассы: сумму входа, нижнюю границу ставки, порог вывода и комиссию. Эти четыре числа игрок проверяет сам, а отдача остаётся заявлением провайдера.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="porogi">
+  <div class="text">
+    <h2>Казино с минимальным депозитом 10, 50, 100 и 300 рублей: что стоит за цифрами</h2>
+    <p class="answer">Четыре типовых порога при одинаковом минимуме выплаты 500 ₽ дают кратность <b>×50, ×10, ×5 и ×1,7</b>. Вход от 10 ₽ выглядит самым дешёвым, но до первой выплаты баланс должен вырасти в пятьдесят раз; вход от 300 ₽ дороже, зато выплата начинается почти сразу над стартом. Ниже те же числа на графике и в таблице.</p>
+
+    <figure class="fig">
+      <svg role="img" aria-labelledby="f1t f1d" width="100%" height="214">
+        <title id="f1t">Кратность до минимального вывода 500 ₽ при депозите 10, 50, 100 и 300 рублей</title>
+        <desc id="f1d">Горизонтальные полосы на логарифмической шкале: ×50 для 10 рублей, ×10 для 50, ×5 для 100 и ×1,7 для 300.</desc>
+        <g stroke="var(--grid)" stroke-width="1">
+          <line x1="22%" y1="8" x2="22%" y2="190"/><line x1="46%" y1="8" x2="46%" y2="190"/><line x1="70%" y1="8" x2="70%" y2="190"/><line x1="94%" y1="8" x2="94%" y2="190"/>
+        </g>
+        <g class="cap"><text x="22%" y="206" text-anchor="middle" class="cap">×1</text><text x="46%" y="206" text-anchor="middle" class="cap">×5</text><text x="70%" y="206" text-anchor="middle" class="cap">×25</text><text x="94%" y="206" text-anchor="middle" class="cap">×125</text></g>
+        <text x="0" y="30">10 ₽</text><rect x="22%" y="18" width="58.3%" height="18" rx="3" fill="var(--bar-a)"/><text x="81.5%" y="31" class="v">×50</text>
+        <text x="0" y="74">50 ₽</text><rect x="22%" y="62" width="34.3%" height="18" rx="3" fill="var(--bar-b)"/><text x="57.5%" y="75" class="v">×10</text>
+        <text x="0" y="118">100 ₽</text><rect x="22%" y="106" width="24%" height="18" rx="3" fill="var(--bar-c)"/><text x="47.2%" y="119" class="v">×5</text>
+        <text x="0" y="162">300 ₽</text><rect x="22%" y="150" width="7.6%" height="18" rx="3" fill="var(--bar-d)"/><text x="30.8%" y="163" class="v">×1,7</text>
+      </svg>
+      <figcaption>Шкала логарифмическая: ширина полосы = log₅(кратность) ÷ 3 от рабочей области. Минимальный вывод 500 ₽ зафиксирован, комиссия не учтена. Расчётный пример по типовым правилам касс.</figcaption>
+      <div class="grid">
+        <table>
+          <caption>Те же числа: кратность, раунды при ставке 5 ₽ и чистый результат при выводе ровно 500 ₽ с комиссией 2 %</caption>
+          <thead><tr><th>Депозит</th><th class="n">Кратность до 500 ₽</th><th class="n">Раундов по 5 ₽</th><th class="n">На руки</th><th class="n">Результат</th></tr></thead>
+          <tbody>
+            <tr><td class="lbl"><i class="sw" style="background:var(--bar-a)"></i>10 ₽</td><td class="n">×50</td><td class="n">2</td><td class="n">490 ₽</td><td class="n">+480 ₽</td></tr>
+            <tr><td class="lbl"><i class="sw" style="background:var(--bar-b)"></i>50 ₽</td><td class="n">×10</td><td class="n">10</td><td class="n">490 ₽</td><td class="n">+440 ₽</td></tr>
+            <tr><td class="lbl"><i class="sw" style="background:var(--bar-c)"></i>100 ₽</td><td class="n">×5</td><td class="n">20</td><td class="n">490 ₽</td><td class="n">+390 ₽</td></tr>
+            <tr><td class="lbl"><i class="sw" style="background:var(--bar-d)"></i>300 ₽</td><td class="n">×1,7</td><td class="n">60</td><td class="n">490 ₽</td><td class="n">+190 ₽</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Казино с минимальным депозитом 10 рублей встречается там, где касса принимает пополнение через СБП или через внутренний кошелёк: эквайринг карт с суммой ниже 50 ₽ нерентабелен для оператора из-за фиксированной части комиссии процессинга. Такой взнос покупает два спина по 5 ₽ или десять по 1 ₽ — это тест кассы, а не игра. Он полезен ровно для одного: увидеть, что перевод зачислился, и посмотреть, как выглядит форма вывода.</p>
+      <p>Казино с минимальным депозитом 50 рублей — нижняя граница, с которой карты МИР принимаются через большинство платёжных шлюзов. Кратность ×10 означает, что на дистанции в 10–50 раундов баланс должен удвоиться трижды подряд; для слота со средней волатильностью это редкое событие, а для высоковолатильного — обычный исход одного крупного выигрыша. Выбор игры здесь важнее выбора кассы.</p>
+      <p>Казино с минимальным депозитом 100 рублей в 2026 году — самый распространённый вариант для рублёвых касс: такой минимум одинаково держат и СБП, и карты, и P2P-переводы на реквизиты физлица. Кратность ×5 при выплате от 500 ₽ — та граница, ниже которой малый депозит перестаёт быть формальностью. Двадцать спинов по 5 ₽ или сотня по рублю дают сессии дистанцию, на которой уже проявляется волатильность игры, а не только первые два спина.</p>
+      <p>Казино с минимальным депозитом 300 рублей чаще встречается у операторов с лицензией Кюрасао нового образца, где KYC запрашивается до первого вывода и оператор заинтересован отсечь тестовые счета. Кратность ×1,7 почти снимает проблему порога выплаты, но и цена ошибки выше: при неудачной сессии теряется в тридцать раз больше, чем при взносе от 10 ₽. Выбор между 100 и 300 ₽ — выбор между короткой дистанцией и близким кэшаутом.</p>
+    </div>
+
+    <div class="qa">
+      <details><summary>Есть ли разница между депозитом 50 ₽ и 100 ₽, если минимальный вывод одинаковый?</summary><div class="body"><p>Разница в кратности до вывода: при пороге 500 ₽ входу в 50 ₽ нужно вырасти в десять раз, входу в 100 ₽ — в пять. Второй сценарий чаще заканчивается выплатой при тех же шансах в игре, потому что дистанция до цели короче. Если цель — проверить кассу и вывод, 100 ₽ чаще оказывается дешевле 50 ₽: меньше вероятность, что придётся пополнять второй раз.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="stavka">
+  <div class="text">
+    <h2>Минимальная ставка решает, сколько раундов вы купили</h2>
+    <p class="answer">В казино с минимальным депозитом 100 рублей один и тот же вход покупает <b>100 раундов при ставке 1 ₽ и 5 раундов при ставке 20 ₽</b>. Нижняя граница ставки зависит от провайдера и от того, сколько линий у слота; оператор видит её в конфигурации игры и показать её обязан в панели ставки. Для живых столов с дилером минимум 50–100 ₽ за раздачу делает любой малый депозит одно-двухраундовым.</p>
+
+    <figure class="fig">
+      <svg role="img" aria-labelledby="f2t f2d" width="100%" height="258">
+        <title id="f2t">Число раундов на депозите 100 и 300 рублей при минимальной ставке от 1 до 20 рублей</title>
+        <desc id="f2d">Пары горизонтальных полос: при ставке 1 рубль 100 и 300 раундов, при 2 рублях 50 и 150, при 5 рублях 20 и 60, при 10 рублях 10 и 30, при 20 рублях 5 и 15.</desc>
+        <g stroke="var(--grid)" stroke-width="1"><line x1="20%" y1="6" x2="20%" y2="236"/><line x1="46.7%" y1="6" x2="46.7%" y2="236"/><line x1="73.3%" y1="6" x2="73.3%" y2="236"/><line x1="100%" y1="6" x2="100%" y2="236"/></g>
+        <g><text x="20%" y="252" text-anchor="middle" class="cap">0</text><text x="46.7%" y="252" text-anchor="middle" class="cap">100</text><text x="73.3%" y="252" text-anchor="middle" class="cap">200</text><text x="100%" y="252" text-anchor="end" class="cap">300 раундов</text></g>
+        <text x="0" y="26">1 ₽</text><rect x="20%" y="12" width="26.7%" height="10" rx="2" fill="var(--bar-c)"/><text x="47.5%" y="21" class="v">100</text><rect x="20%" y="24" width="80%" height="10" rx="2" fill="var(--bar-d)"/><text x="98%" y="33" text-anchor="end" class="v" style="fill:var(--on-wine)">300</text>
+        <text x="0" y="72">2 ₽</text><rect x="20%" y="58" width="13.3%" height="10" rx="2" fill="var(--bar-c)"/><text x="34.2%" y="67" class="v">50</text><rect x="20%" y="70" width="40%" height="10" rx="2" fill="var(--bar-d)"/><text x="60.8%" y="79" class="v">150</text>
+        <text x="0" y="118">5 ₽</text><rect x="20%" y="104" width="5.3%" height="10" rx="2" fill="var(--bar-c)"/><text x="26.2%" y="113" class="v">20</text><rect x="20%" y="116" width="16%" height="10" rx="2" fill="var(--bar-d)"/><text x="36.8%" y="125" class="v">60</text>
+        <text x="0" y="164">10 ₽</text><rect x="20%" y="150" width="2.7%" height="10" rx="2" fill="var(--bar-c)"/><text x="23.5%" y="159" class="v">10</text><rect x="20%" y="162" width="8%" height="10" rx="2" fill="var(--bar-d)"/><text x="28.8%" y="171" class="v">30</text>
+        <text x="0" y="210">20 ₽</text><rect x="20%" y="196" width="1.4%" height="10" rx="2" fill="var(--bar-c)"/><text x="22.2%" y="205" class="v">5</text><rect x="20%" y="208" width="4%" height="10" rx="2" fill="var(--bar-d)"/><text x="24.8%" y="217" class="v">15</text>
+      </svg>
+      <div class="key"><span><i style="background:var(--bar-c)"></i>депозит 100 ₽</span><span><i style="background:var(--bar-d)"></i>депозит 300 ₽</span></div>
+      <figcaption>Линейная шкала, раунды = депозит ÷ ставка без учёта выигрышей. Минимальная ставка берётся из панели игры, у разных провайдеров она отличается в 10–20 раз.</figcaption>
+      <div class="grid">
+        <table>
+          <caption>Те же числа: раунды на депозите при пяти уровнях минимальной ставки</caption>
+          <thead><tr><th>Ставка за раунд</th><th class="n">100 ₽</th><th class="n">300 ₽</th><th>Где встречается такой минимум</th></tr></thead>
+          <tbody>
+            <tr><td class="lbl">1 ₽</td><td class="n">100</td><td class="n">300</td><td>классические слоты с 1–10 линиями, ставка на линию от 0,1 ₽</td></tr>
+            <tr><td class="lbl">2 ₽</td><td class="n">50</td><td class="n">150</td><td>видеослоты с фиксированными 20 линиями по 0,1 ₽</td></tr>
+            <tr><td class="lbl">5 ₽</td><td class="n">20</td><td class="n">60</td><td>слоты с 25–50 линиями, большинство Megaways</td></tr>
+            <tr><td class="lbl">10 ₽</td><td class="n">10</td><td class="n">30</td><td>краш-игры, скретчи, часть провайдеров с минимумом 0,1 USD</td></tr>
+            <tr><td class="lbl">20 ₽</td><td class="n">5</td><td class="n">15</td><td>настольные RNG-игры, лёгкие столы с дилером</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+
+    <div class="prose">
+      <p>Минимальная ставка в слоте складывается из ставки на линию и числа активных линий. Провайдеры с настраиваемым количеством линий позволяют опустить спин до 1 ₽, а слоты с фиксированной структурой выплат — 20, 25 или 243 способа — задают минимум на весь экран, и он редко бывает ниже 5 ₽ в рублёвой кассе. Megaways-механика с 117 649 комбинациями обычно начинается от 10 ₽ за спин, потому что провайдер пересчитывает минимум из 0,1 USD по внутреннему курсу.</p>
+      <p>Курс пересчёта — вторая скрытая величина. Часть провайдеров держит ставки в условных единицах и показывает рубли по курсу оператора; тогда «минимум 0,1» превращается то в 8, то в 12 ₽ в зависимости от того, как касса округляет. При депозите 100 ₽ эта разница между 12 и 8 раундами, то есть треть сессии. Панель ставки в демо-режиме показывает округлённое значение до того, как деньги внесены.</p>
+      <p>Для игр с дилером нижняя граница устроена иначе: стол окупается только при определённом обороте, поэтому минимум раздачи в рулетке или блэкджеке обычно начинается от 50 ₽, а у «лёгких» столов для мобильных приложений — от 20 ₽. Малый депозит в живой зал даёт одну-две раздачи и подходит разве что для проверки видеопотока и чата со столом, не для сессии.</p>
+      <p>Бонусный режим накладывает собственный потолок: при активном бонусе оператор ограничивает максимальную ставку (типично 100–500 ₽), а некоторые ещё и поднимают минимум, чтобы вейджер не отыгрывался копеечными спинами. Если минимальный депозит включает бонус автоматически, число раундов из калькулятора нужно пересчитать по новому минимуму ставки, который указан в условиях акции, а не в игре.</p>
+      <p>Скорость расхода тоже стоит перевести в минуты. Обычный спин с анимацией длится 3–4 секунды, автоспин с турбо-режимом укорачивает его до секунды; двадцать попыток по 5 ₽ в турбо заканчиваются за полминуты, тогда как вручную растягиваются на полторы. Краш-игры и скретч-карты идут ещё быстрее: решение принимается за доли секунды, и сотня рублей исчезает раньше, чем успеваешь оценить темп. Для короткой сессии отключённый автоспин — простой способ сохранить контроль над тем, что осталось от банка.</p>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="vyvod">
+  <div class="text">
+    <h2>Казино с минимальным депозитом и выводом на карту: где теряется первая сотня</h2>
+    <p class="answer">Порог выплаты у рублёвых касс чаще всего <b>300–500 ₽ по СБП и 500–1 000 ₽ на карту</b>; у криптовалютных способов минимум задаёт сеть — для USDT TRC-20 это эквивалент 10–20 USD плюс сетевая комиссия около 1 USDT. Комиссия на выплату — вторая статья потерь: ноль по СБП у многих операторов, 2–5 % на карту через эквайринг, фиксированные 50–100 ₽ при P2P-переводе на реквизиты.</p>
+
+    <div class="grid rails">
+      <table>
+        <caption>Типовые пороги и комиссии по способам выплаты для рублёвых касс; расчётные значения на основе публичных правил, не обзор конкретных операторов</caption>
+        <thead><tr><th>Способ</th><th class="n">Мин. депозит</th><th class="n">Мин. вывод</th><th>Комиссия на вывод</th><th>Срок зачисления</th><th>Что учесть</th></tr></thead>
+        <tbody>
+          <tr><td>СБП</td><td class="n">10–100 ₽</td><td class="n">300–500 ₽</td><td>0 % или 1 %</td><td>минуты после одобрения</td><td>банк отправителя может отклонить перевод по антифроду; лимит бесплатных переводов 100 000 ₽ в месяц к малым суммам не относится</td></tr>
+          <tr><td>Карта МИР</td><td class="n">50–300 ₽</td><td class="n">500–1 000 ₽</td><td>2–5 %, минимум 50 ₽</td><td>от часа до 3 дней</td><td>MCC 7995 у части банков заблокирован для списаний; возврат на карту идёт через OCT и может задержаться</td></tr>
+          <tr><td>P2P на реквизиты</td><td class="n">100–500 ₽</td><td class="n">1 000 ₽</td><td>фиксированные 50–100 ₽</td><td>до суток</td><td>переводы на счета физлиц; при малых суммах комиссия превращается в 5–10 %</td></tr>
+          <tr><td>USDT TRC-20</td><td class="n">≈ 500 ₽ (5 USDT)</td><td class="n">≈ 1 000–2 000 ₽</td><td>сеть ≈ 1 USDT</td><td>10–30 минут</td><td>минимум задан сетью, не кассой; курс конвертации оператора добавляет 1–3 %</td></tr>
+          <tr><td>Внутренний кошелёк</td><td class="n">от 10 ₽</td><td class="n">по правилам кошелька</td><td>0 %</td><td>мгновенно</td><td>вывод из кошелька на карту — отдельный лимит и отдельная комиссия</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose">
+      <p>Запрос «казино с минимальным депозитом и выводом денег на карту» объединяет два разных лимита, и разница между порогом по СБП и по карте объясняется стоимостью операции для оператора. Исходящий перевод через СБП обходится в фиксированную долю процента, а выплата на карту идёт через OCT-транзакцию (Original Credit Transaction) с фиксированной частью комиссии, из-за которой выплата в 300 ₽ для процессинга невыгодна. Отсюда минимум от 500 ₽ по карте и ограничение «не больше N заявок в сутки» — оно защищает оператора от дробления.</p>
+      <p>Комиссия «за низкий оборот» — пункт правил, который ломает расчёт сильнее всех. Формулировка обычно такая: если сумма ставок с момента последнего депозита меньше x3 (иногда x1 или x5), вывод облагается комиссией 10–15 %. При взносе 100 ₽ и выигрыше в первом же спине оборот равен одной ставке, и кэшаут 500 ₽ теряет 50–75 ₽. Калькулятор на этой странице считает именно этот случай: передвиньте комиссию на 10 % и посмотрите, как уменьшается «на руки».</p>
+      <p>Верификация добавляет не комиссию, а время. По правилам большинства касс KYC обязателен до первого вывода, и процедура занимает от 10 минут при автоматической проверке паспорта до 2–3 суток при ручной. Для 500 ₽ это неприятно, но предсказуемо; хуже, когда оператор запрашивает подтверждение источника средств по аналогии с требованиями 115-ФЗ — при копеечном взносе такой запрос обычно означает, что аккаунт попал под антифрод, и выплата зависает надолго.</p>
+      <p>Реверс вывода — функция, которая позволяет отменить заявку на выплату, пока она на рассмотрении, и вернуть деньги на игровой баланс. Для маленьких сумм она опасна вдвойне: 500 ₽ легко отыграть «пока ждёшь», а повторная заявка снова попадёт в очередь и под те же комиссии. Если в кассе есть кнопка отмены заявки, безопаснее закрыть вкладку до прихода денег.</p>
+      <p>Со стороны банка есть ещё один фильтр, не связанный с оператором. С июля 2024 года по поправкам к 161-ФЗ банк отправителя обязан сверять получателя с базой Банка России о подозрительных переводах и при совпадении приостанавливать операцию на два дня — так называемый период охлаждения. P2P-реквизиты касс нередко оказываются в этой базе, и перевод в 100 ₽ зависает на двое суток, а потом возвращается. Для игрока это выглядит как «деньги списались, баланс не пополнился»; претензию в таком случае принимает банк, а не касса, и ссылаться нужно на уведомление о приостановке в приложении.</p>
+    </div>
+
+    <div class="qa">
+      <details><summary>Можно ли внести минимальный депозит по СБП, если у банка есть лимит на переводы?</summary><div class="body"><p>Лимиты СБП касаются сумм в сотни тысяч рублей в месяц и на малый депозит не влияют. Ограничение бывает другим: банк отправителя может отклонить перевод в адрес получателя, которого антифрод относит к азартным играм. Тогда платёж не проходит независимо от суммы, и помогает другой способ пополнения, а не изменение суммы.</p></div></details>
+      <details><summary>Что делать, если минимальный вывод выше, чем весь мой баланс после игры?</summary><div class="body"><p>Остаток ниже порога вывода остаётся на счёте до следующей сессии или до пополнения. Перевести его на карту нельзя, пока баланс не достигнет минимума — так работает правило у большинства касс. Поэтому порог вывода стоит смотреть до первого депозита: при входе 50 ₽ и минимуме 1 000 ₽ почти любой итог сессии окажется «подвисшим» балансом.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="bonus">
+  <div class="text">
+    <h2>Бонус за 100 рублей: вейджер против маленького банка</h2>
+    <p class="answer">Приветственный бонус на минимальный депозит выглядит удвоением банка, но вейджер x35 на сумму депозита и бонуса превращает 100 ₽ в <b>обязательный оборот 7 000 ₽</b>. На ставке 5 ₽ это 1 400 раундов — дистанция, на которой преимущество игры в 3–5 % съедает около 210–350 ₽ ожидаемых потерь при банке в 200 ₽. Для малого входа бонус почти всегда минус, если условия не ограничены вейджером x10 и ниже на сумму только бонуса.</p>
+
+    <div class="grid">
+      <table>
+        <caption>Оборот для отыгрыша при депозите 100 ₽ и бонусе 100 % — расчёт по типовым условиям, ожидаемая потеря при преимуществе игры 4 %</caption>
+        <thead><tr><th>Условие</th><th class="n">База вейджера</th><th class="n">Оборот</th><th class="n">Раундов по 5 ₽</th><th class="n">Ожидаемая потеря</th><th>Итог для банка 200 ₽</th></tr></thead>
+        <tbody>
+          <tr><td class="lbl">x10 на бонус</td><td class="n">100 ₽</td><td class="n">1 000 ₽</td><td class="n">200</td><td class="n">≈ 40 ₽</td><td>реальный шанс закрыть отыгрыш</td></tr>
+          <tr><td class="lbl">x20 на бонус</td><td class="n">100 ₽</td><td class="n">2 000 ₽</td><td class="n">400</td><td class="n">≈ 80 ₽</td><td>половина банка уходит в ожидании</td></tr>
+          <tr><td class="lbl">x35 на депозит + бонус</td><td class="n">200 ₽</td><td class="n">7 000 ₽</td><td class="n">1 400</td><td class="n">≈ 280 ₽</td><td>ожидаемая потеря больше банка</td></tr>
+          <tr><td class="lbl">x50 на депозит + бонус</td><td class="n">200 ₽</td><td class="n">10 000 ₽</td><td class="n">2 000</td><td class="n">≈ 400 ₽</td><td>отыгрыш статистически недостижим</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose">
+      <p>Три параметра решают судьбу бонуса на малом депозите. Первый — база вейджера: «x35 на бонус» и «x35 на депозит плюс бонус» различаются вдвое по обороту. Второй — вклад игр: слоты обычно идут в отыгрыш на 100 %, настольные игры на 5–10 %, живые столы часто на 0 %, и сессия в рулетке не уменьшает оборот. Третий — max cashout, потолок выплаты с бонусных средств: типичные x5–x10 от суммы бонуса ограничивают выигрыш 500–1 000 ₽ независимо от того, что показал слот.</p>
+      <p>Ожидаемая потеря в таблице посчитана как оборот, умноженный на преимущество игры: при RTP 96 % это 4 % с каждого поставленного рубля. Для оборота 7 000 ₽ ожидание равно 280 ₽ при банке в 200 ₽ — то есть в среднем отыгрыш не доживает до конца. Отдельные сессии выбиваются из среднего за счёт волатильности, но планировать на выброс нельзя; это та же причина, по которой калькулятор выше не использует RTP.</p>
+      <p>Non-sticky-бонус меняет картину. В такой схеме сначала играют собственные деньги, а бонус подключается только если депозит проигран; пока игрок в плюсе, он может вывести выигрыш, отказавшись от бонуса. Для входа от 100 ₽ это единственный формат, при котором подарок ничего не стоит: удачная первая сессия выводится без вейджера, неудачная получает второй шанс. Sticky-бонус с автоматической активацией, наоборот, блокирует весь баланс под оборот с первого спина.</p>
+      <p>В казино с минимальным депозитом порог для бонуса, как правило, выше порога кассы: касса пускает от 50 ₽, а акция начинается от 500 или 1 000 ₽. Это защищает оператора от массовых тестовых счетов и одновременно подсказывает игроку, что две цифры «минимум» на сайте относятся к разным вещам. Если бонус включается автоматически при любом депозите, в настройках профиля ищите отказ от бонусов — обычно он есть, но спрятан.</p>
+      <p>Фриспины вместо денежного подарка устроены иначе и для маленького взноса подходят чаще. Пакет из 20–50 бесплатных вращений имеет номинал — 5 или 10 ₽ за спин — и выигрыш с него зачисляется как бонусные деньги с собственным вейджером, обычно x20–x40 только на сумму выигрыша. Поскольку выигрыш с фриспинов редко превышает 100–200 ₽, оборот для отыгрыша получается в разы меньше, чем у денежного бонуса на ту же стартовую сумму. Срок активации у таких пакетов короткий — 24–72 часа после зачисления, после чего невостребованные вращения сгорают вместе с накопленным результатом. Кэшбэк в процентах от проигрыша для микробанка почти незаметен: 10 % от потерянных 100 ₽ — это десять рублей, которых не хватит даже на два спина.</p>
+    </div>
+
+    <div class="qa">
+      <details><summary>Бонус за минимальный депозит выгоднее, чем игра без бонуса?</summary><div class="body"><p>При депозите 100 ₽ и вейджере x35 на сумму депозит плюс бонус оборот составит 7 000 ₽ — в 70 раз больше собственных денег. На минимальной ставке 5 ₽ это 1 400 раундов, и за такую дистанцию математическое преимущество игры почти наверняка съест и бонус, и депозит. Без бонуса 100 ₽ можно вывести после первого же удачного раунда, если баланс дошёл до порога. Для малого входа игра без бонуса обычно предпочтительнее.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="proverka">
+  <div class="text">
+    <h2>Пять проверок перед первым переводом</h2>
+    <p class="answer">Четыре числа для калькулятора собираются <b>за десять минут без регистрации</b>: лимиты видны в кассе, ставка — в демо-режиме игры, лицензия — в подвале и реестре регулятора. Пятый шаг — перевод ровно минимальной суммы как тест кассы, не как начало игры.</p>
+
+    <figure class="fig">
+      <svg role="img" aria-labelledby="f3t f3d" width="100%" height="118" viewBox="0 0 1000 118" preserveAspectRatio="xMidYMid meet">
+        <title id="f3t">Схема пяти проверок перед первым депозитом</title>
+        <desc id="f3d">Пять прямоугольников слева направо, соединённых стрелками: касса, демо-ставка, кратность, лицензия и KYC, перевод минимума. Из третьего и четвёртого шага есть выход «стоп».</desc>
+        <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5 0 10z" fill="var(--hair-2)"/></marker></defs>
+        <g fill="var(--sheet-2)" stroke="var(--hair-2)" stroke-width="1.5">
+          <rect x="4" y="22" width="170" height="56" rx="8"/><rect x="210" y="22" width="170" height="56" rx="8"/><rect x="416" y="22" width="170" height="56" rx="8"/><rect x="622" y="22" width="170" height="56" rx="8"/><rect x="828" y="22" width="168" height="56" rx="8" fill="var(--ok-wash)" stroke="var(--ok)"/>
+        </g>
+        <g stroke="var(--hair-2)" stroke-width="1.5" marker-end="url(#arr)"><line x1="174" y1="50" x2="208" y2="50"/><line x1="380" y1="50" x2="414" y2="50"/><line x1="586" y1="50" x2="620" y2="50"/><line x1="792" y1="50" x2="826" y2="50"/></g>
+        <g fill="var(--wine)"><circle cx="24" cy="50" r="11"/><circle cx="230" cy="50" r="11"/><circle cx="436" cy="50" r="11"/><circle cx="642" cy="50" r="11"/><circle cx="848" cy="50" r="11" fill="var(--ok)"/></g>
+        <g font-size="12" font-weight="700" fill="var(--on-wine)" text-anchor="middle"><text x="24" y="54" style="fill:var(--on-wine)">1</text><text x="230" y="54" style="fill:var(--on-wine)">2</text><text x="436" y="54" style="fill:var(--on-wine)">3</text><text x="642" y="54" style="fill:var(--on-wine)">4</text><text x="848" y="54" style="fill:var(--on-wine)">5</text></g>
+        <g class="v" font-size="13"><text x="42" y="46" class="v">Касса:</text><text x="42" y="63">депозит, вывод, комиссия</text><text x="248" y="46" class="v">Демо-режим:</text><text x="248" y="63">минимальная ставка</text><text x="454" y="46" class="v">Кратность:</text><text x="454" y="63">вывод ÷ депозит ≤ ×10</text><text x="660" y="46" class="v">Лицензия и KYC:</text><text x="660" y="63">реестр, момент проверки</text><text x="866" y="46" class="v">Перевод минимума</text><text x="866" y="63">тест кассы, не игра</text></g>
+        <g font-size="11" fill="var(--no)"><text x="501" y="104" text-anchor="middle" style="fill:var(--no)">×10 и выше → другой способ или другая касса</text><text x="707" y="104" text-anchor="middle" style="fill:var(--no)">номера нет в реестре → стоп</text></g>
+      </svg>
+      <figcaption>Схема повторяет шаги списка ниже. Выходы «стоп» на шагах 3 и 4 означают выбор другого способа оплаты или другого оператора, а не отказ от проверки.</figcaption>
+    </figure>
+
+    <ol class="route">
+      <li><span><b>Откройте кассу до регистрации.</b> Раздел с лимитами обычно доступен без входа: ищите строки «минимальный депозит», «минимальная сумма вывода» и «комиссия» для каждого способа отдельно. Если у СБП и карты МИР числа разные — записывайте оба.</span></li>
+      <li><span><b>Найдите минимальную ставку в самой игре.</b> Запустите слот в демо-режиме и посмотрите нижнюю границу ставки в панели: у части провайдеров она 1–2 ₽ на линию, у части — 10–20 ₽ за спин. Для живых столов нижняя граница заметно выше.</span></li>
+      <li><span><b>Посчитайте кратность до вывода.</b> Разделите минимальный вывод на депозит. Кратность выше ×10 означает, что малый вход формальный: до первой выплаты баланс должен вырасти на порядок.</span></li>
+      <li><span><b>Сверьте лицензию и правила KYC.</b> Номер лицензии ищите в подвале сайта и в реестре регулятора; в правилах — пункт о верификации: если документы требуют до первого вывода, а не до депозита, маленькая сумма может зависнуть на проверке.</span></li>
+      <li><span><b>Переведите ровно минимум.</b> Первый перевод — сумма, равная минимальному депозиту, не больше. Задача первого перевода — увидеть, что деньги зачислились, что бонус не включился сам и что в кассе появилась кнопка вывода с ожидаемыми лимитами.</span></li>
+    </ol>
+
+    <div class="prose">
+      <p>Лицензия у казино с минимальным депозитом важна по одной практической причине: регулятор задаёт, когда оператор обязан провести KYC и может ли он удерживать выплату. У Кюрасао после реформы 2024 года (закон LOK, лицензии выдаёт Curaçao Gaming Authority) верификация требуется до первого вывода, и жалобу на удержание принимает сам регулятор. У лицензий Anjouan и Kahnawake процедура жалобы существует, но практика по микросуммам почти не описана. Для игроков из России важно помнить: по 244-ФЗ онлайн-игры в сети вне зон не лицензируются, поэтому любой иностранный оператор работает вне российского надзора, а спорная выплата в 500 ₽ решается только через регулятора оператора.</p>
+      <p>Реестр регулятора — публичная страница, где по номеру лицензии видно название юридического лица и список доменов. Если домен сайта в реестре отсутствует, перед вами либо зеркало, не внесённое оператором, либо чужой сайт под чужим номером. Для суммы в 100 ₽ риск кажется незначительным, но данные карты и паспорт при KYC стоят дороже депозита — именно их защищает четвёртый шаг.</p>
+      <p>Платёжные данные для первого перевода лучше брать из кассы в момент оплаты, а не из сохранённых реквизитов: P2P-реквизиты меняются каждые несколько часов, и перевод на вчерашний номер карты уходит другому получателю. Для СБП то же правило — платёжная ссылка живёт 10–15 минут, после чего касса генерирует новую с другим идентификатором.</p>
+      <p>Если демо-режим недоступен без входа в аккаунт, нижнюю границу ставки можно посмотреть на витрине провайдера: у студий вроде тех, что держат публичные каталоги игр, каждая страница слота открывает демо в браузере и показывает диапазон ставок в валюте по умолчанию. Пересчёт в рубли делайте по курсу, который оператор указывает в кассе, и округляйте вверх — именно так делает его биллинг. Этот обходной путь занимает две минуты и не требует ни регистрации, ни передачи номера телефона.</p>
+    </div>
+
+    <div class="qa">
+      <details><summary>Зачем переводить ровно минимум, если планирую играть на бо́льшую сумму?</summary><div class="body"><p>Первый перевод — проверка кассы, а не игра. Он показывает время зачисления, срабатывание автоматического бонуса, доступность кнопки вывода и реальные лимиты для вашего способа оплаты. Если на этом шаге что-то не сходится с правилами, вы теряете минимальную сумму, а не банк на вечер. Вторая сумма переводится уже после того, как первый вывод пришёл на карту.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="part care" id="care">
+  <div class="text">
+    <h2><span class="age">18+</span>Малый вход и привычка пополнять</h2>
+    <div class="prose">
+      <p>Казино с минимальным депозитом меняет поведение сильнее, чем кажется: 100 ₽ не ощущаются деньгами, и серия из десяти пополнений по 100 ₽ за вечер проходит незаметно, тогда как 1 000 ₽ одним переводом заставили бы остановиться. Калькулятор на этой странице считает одну попытку; если пополнений за вечер больше трёх, пересчитайте стартовую сумму как итог всех переводов — расстояние до выплаты при этом растёт, а не сокращается.</p>
+      <p>Лимит на депозит в настройках профиля — инструмент, который есть у операторов с лицензией Кюрасао и MGA по требованию регулятора. Поставьте дневной лимит, равный одному минимальному депозиту, до первого перевода: снять ограничение можно, но у честного оператора снятие вступает в силу через 24 часа, и этого промежутка хватает, чтобы решение принимала голова, а не сессия. Самоисключение и тайм-аут на 7–30 дней доступны в том же разделе.</p>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="kanal">
+  <div class="text">
+    <div class="channel">
+      <div>
+        <h2>Обновления порогов и канал</h2>
+        <p>Пороги депозита и вывода у касс меняются вместе с комиссиями платёжных шлюзов; страница пересчитывается при заметных сдвигах. Сводки по рублёвым кассам, лимитам и срокам выплат, в том числе по казино с минимальным депозитом и выводом, публикуются в телеграм-канале.</p>
+      </div>
+      <a class="go" href="https://t.me/top_casino_2027" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.8 15.5 9.5 19.7c.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.4c.3-1.2-.5-1.8-1.3-1.4L2.9 10.8c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 10.7-6.7c.5-.3 1-.1.6.2z"/></svg>Открыть канал</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="page">
+    <div>
+      <h3>Нижний порог</h3>
+      <p>Страница о казино с минимальным депозитом и реальной стоимости входа: калькулятор, пороги 10–300 ₽, ставка, вывод, бонус. Автор — редакция «Нижний порог». Обновлено 1 октября 2026.</p>
+    </div>
+    <div>
+      <h3>Что на странице условно</h3>
+      <p>Все лимиты, комиссии и сроки — расчётные примеры по типовым правилам рублёвых касс. Страница не называет и не оценивает конкретных операторов; партнёрских ссылок нет.</p>
+    </div>
+    <div>
+      <h3>Ответственность</h3>
+      <p>Азартные игры доступны с 18 лет. Онлайн-игры за пределами игорных зон в России не лицензируются; выплаты иностранных операторов регулируются их лицензией. Играйте на суммы, потерю которых не заметите.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var dep=$('dep'),bet=$('bet'),wd=$('wd'),fee=$('fee');
+  if(!dep||!bet||!wd||!fee)return;
+  var fmt=function(n){return n.toLocaleString('ru-RU')};
+  var rub=function(n){return fmt(Math.round(n))+' ₽'};
+  function calc(){
+    var D=+dep.value,S=+bet.value,W=+wd.value,F=+fee.value;
+    $('dep-out').textContent=rub(D);$('bet-out').textContent=rub(S);$('wd-out').textContent=rub(W);$('fee-out').textContent=String(F).replace('.',',')+' %';
+    var rounds=Math.floor(D/S),mult=W/D,feeAmt=W*F/100,net=W-feeAmt,profit=net-D;
+    $('r-rounds').textContent=fmt(rounds);
+    $('r-mult').textContent='×'+mult.toFixed(1).replace('.',',');
+    $('r-fee').textContent='−'+rub(feeAmt);
+    $('r-net').textContent=rub(net);
+    var p=$('r-profit');p.textContent=(profit>=0?'+':'−')+rub(Math.abs(profit));p.className='tab '+(profit>=0?'plus':'minus');
+    var v=$('r-verdict'),mark,head,tail;
+    if(rounds<10){mark='<span class="mark bad">формальный вход</span>';head='Депозит покупает '+fmt(rounds)+' раундов — меньше десяти.';tail=' Такой вход годится для теста кассы, а не для сессии: ищите игру с минимальной ставкой ниже или поднимите депозит.';}
+    else if(mult>10){mark='<span class="mark warn">порог вывода съедает смысл</span>';head='До минимального вывода ×'+mult.toFixed(1).replace('.',',')+'.';tail=' Баланс должен вырасти на порядок до первой выплаты; способ с меньшим минимумом вывода (чаще СБП) исправляет это сильнее, чем смена игры.';}
+    else{mark='<span class="mark good">рабочий порог</span>';head='Депозит покупает '+fmt(rounds)+' раундов, до вывода ×'+mult.toFixed(1).replace('.',',')+'.';tail=' Вход дешёвый по-настоящему: сессия получает дистанцию, а первая выплата не требует вырасти на порядок.';}
+    v.innerHTML=mark+'<b>'+head+'</b>'+tail;
+  }
+  [dep,bet,wd,fee].forEach(function(el){el.addEventListener('input',calc)});
+  calc();
+  var links=document.querySelectorAll('.masthead nav a'),secs=[];
+  links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)secs.push([s,a])});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('now')});secs.forEach(function(p){if(p[0]===e.target)p[1].classList.add('now')})}})},{rootMargin:'-40% 0px -55% 0px'});
+    secs.forEach(function(p){io.observe(p[0])});
+  }
+})();
+</script>
+</body>
+</html>

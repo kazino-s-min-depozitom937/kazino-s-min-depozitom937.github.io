@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kazino-s-min-depozitom937.github.io/sitemap.xml
